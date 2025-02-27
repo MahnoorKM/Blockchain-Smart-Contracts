@@ -33,11 +33,11 @@
 	},
 	"sources": {
 		"contracts/lecture_02/one.sol": {
-			"keccak256": "0xebbb17a3dfc90bf7bb065555bd63da497c179966affdd18e2517d45e2ae2a25e",
+			"keccak256": "0xff73ba1ec72cda7bad2ad68c9372dba30b492e56764e3cee0abc154d93f9d791",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://257eecbec356221e4d9a79e0da357a560a61e3eea5fc6bf8c0b05d14b9a859e7",
-				"dweb:/ipfs/QmcpzTvry4sQvZkhrGhzdJuZshTNsMnFmEPx3jKeP8jv4a"
+				"bzz-raw://39e7c32c1d2f3af1a440d85cc39cd0d383d9f98ab2c4a2f93479cbd512a5df2d",
+				"dweb:/ipfs/QmbG6Gdzv1eL4yVSVHid28VChvKRuswDreEkHJCX9ioGbZ"
 			]
 		}
 	},

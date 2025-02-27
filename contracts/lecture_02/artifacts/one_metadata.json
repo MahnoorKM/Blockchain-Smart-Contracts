@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/lecture_02/one.sol": "one"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/lecture_02/one.sol": {
+			"keccak256": "0xebbb17a3dfc90bf7bb065555bd63da497c179966affdd18e2517d45e2ae2a25e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://257eecbec356221e4d9a79e0da357a560a61e3eea5fc6bf8c0b05d14b9a859e7",
+				"dweb:/ipfs/QmcpzTvry4sQvZkhrGhzdJuZshTNsMnFmEPx3jKeP8jv4a"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.28+commit.7893614a"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -844,11 +844,11 @@
 			]
 		},
 		"contracts/lecture_02/ERC20.sol": {
-			"keccak256": "0xee5ae23389e84039e50f9e33dc68a8a967457bc107a79fb654f644eb8d5e84f8",
+			"keccak256": "0xef5f802bc583fc4d650977896ca63ced1c646d43f982fa2fd56004178671249a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://608a0e6305682b0e991bc8d3559a33805805f0b4f5f61e9f0ea32349648f0e17",
-				"dweb:/ipfs/QmVdxcnAFt3RU5LHFAfFiFMANkfxasicDEVJ5PbPh8eoVY"
+				"bzz-raw://27817e09e19109bade27ce8a944dcc70da17b65f13544a731d321f0e48fff5df",
+				"dweb:/ipfs/QmTW3cuk5BUqKaFF5KGNuBwVD338bn1jcG8H5YntBRdGFs"
 			]
 		}
 	},

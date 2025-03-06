@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/lecture_03/dummy_token.sol": "dummtToken"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/lecture_03/dummy_token.sol": {
+			"keccak256": "0x1587eafc84b79cb1d1cf8eead5cd60a1b1764c1929c64f1e01b56b2346a85a03",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6ad13375c3dff4b462da71457cc44b38bd4ed16e47ab03898f93fe954342fecd",
+				"dweb:/ipfs/Qmbs2NvkvC8MPFEJUXtwQKSraft2sCqVUmDMY2nBFEYnhr"
+			]
+		}
+	},
+	"version": 1
+}

@@ -41,6 +41,50 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "mintCap",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "sender",
 						"type": "address"
 					},
@@ -95,11 +139,11 @@
 	},
 	"sources": {
 		"contracts/lecture_03/dummy_token.sol": {
-			"keccak256": "0x20f7446ca258190ee25ac9cb0d99670136db50cbb0cb64e88f5ffae9af2d9971",
+			"keccak256": "0x55afd876e67fea9f1cf9eff6772c9076bf85b4ae82dea9ddba5138f7e660210e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2e872dca07309de09f01773a6f24efb08c1330a2ce6f653ef00d9ea6f72c39f1",
-				"dweb:/ipfs/QmeqwNuUaLaMPKQaBECud4jtWmnAWVCQzXbbfXpSJLGjmP"
+				"bzz-raw://f37cd8241457eacf603c9726b254787ce591daa90316f70c556137d213b1772a",
+				"dweb:/ipfs/QmWp5uF7quzdaqEApqDDhYezjdRwc5yHUYADXcyvjpMvFv"
 			]
 		}
 	},

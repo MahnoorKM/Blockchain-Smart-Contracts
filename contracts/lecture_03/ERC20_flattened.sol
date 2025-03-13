@@ -417,16 +417,39 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
 
 // address public constant A = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
 
-  function transfer(address recipient, uint256 amount) public virtual returns (bool) {
-    address A = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
-    uint256 fee = amount * 10 / 100;
-    uint256 amountAfterFee = amount - fee;
+//   function transfer(address recipient, uint256 amount) public virtual returns (bool) {
+//     address A = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+//     uint256 fee = amount * 10 / 100;
+//     uint256 amountAfterFee = amount - fee;
 
-    emit Transfer(msg.sender, A, fee);
-    emit Transfer(msg.sender, recipient, amountAfterFee);
+//     emit Transfer(msg.sender, A, fee);
+//     emit Transfer(msg.sender, recipient, amountAfterFee);
 
-    return true;
-}
+//     return true;
+// }
+
+    uint public fee = 10;
+    function transfer (address to, uint256 value) public virtual returns (bool) {
+        address owner = _msgSender();
+        address feeAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+
+        uint256 feeamount = (value*fee)/100;
+        value -= fee;
+
+        _transfer(owner, feeAddress, feeamount);
+        _transfer(owner,to, value);
+        return true;
+    }
+
+    modifier onlyOwner() {
+        require(_msgSender() == _owner, "Not an owner");
+        _;
+    }
+    
+    function changeFee(uint newFee) public virtual onlyOwner returns (bool) {
+        fee = newFee;
+        return true;
+    }
 
 
     /**

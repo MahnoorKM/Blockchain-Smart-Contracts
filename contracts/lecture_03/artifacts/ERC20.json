@@ -53,6 +53,7 @@
 			"approve(address,uint256)": "095ea7b3",
 			"balanceOf(address)": "70a08231",
 			"decimals()": "313ce567",
+			"fee()": "ddca3f43",
 			"name()": "06fdde03",
 			"symbol()": "95d89b41",
 			"totalSupply()": "18160ddd",
@@ -279,6 +280,19 @@
 		},
 		{
 			"inputs": [],
+			"name": "fee",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
 			"name": "name",
 			"outputs": [
 				{
@@ -320,12 +334,12 @@
 			"inputs": [
 				{
 					"internalType": "address",
-					"name": "recipient",
+					"name": "to",
 					"type": "address"
 				},
 				{
 					"internalType": "uint256",
-					"name": "amount",
+					"name": "value",
 					"type": "uint256"
 				}
 			],

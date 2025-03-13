@@ -234,6 +234,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "fee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "name",
 				"outputs": [
 					{
@@ -275,12 +288,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "recipient",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -412,7 +425,7 @@
 					"details": "See {IERC20-totalSupply}."
 				},
 				"transfer(address,uint256)": {
-					"details": "See {IERC20-transfer}. Requirements: - `to` cannot be the zero address. - the caller must have a balance of at least `value`."
+					"details": "Moves a `value` amount of tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
 				},
 				"transferFrom(address,address,uint256)": {
 					"details": "See {IERC20-transferFrom}. Skips emitting an {Approval} event indicating an allowance update. This is not required by the ERC. See {xref-ERC20-_approve-address-address-uint256-bool-}[_approve]. NOTE: Does not update the allowance if the current allowance is the maximum `uint256`. Requirements: - `from` and `to` cannot be the zero address. - `from` must have a balance of at least `value`. - the caller must have allowance for ``from``'s tokens of at least `value`."
@@ -443,11 +456,11 @@
 	},
 	"sources": {
 		"contracts/lecture_03/ERC20_flattened.sol": {
-			"keccak256": "0x26b57b31103d3e7ccc67620ebe0450c5983d00c31dd9727cbdb96b179cc115fd",
+			"keccak256": "0xf516bd432a38c2b8bc18f7085e6cec1b1638f4cd64d0565348d6b3531ff4beb2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cec6f57ff47e70d24b62da2f02102cb3b4feaf50f07341757ee6aa61dba735ee",
-				"dweb:/ipfs/QmXwUKiCBKae7i1k4y1vKtd8ytx6aGAQp6CbaKkwdCXSND"
+				"bzz-raw://9dbda519529d31c270fb2325dc6208551928e14b3e09deec6e67c10c930d8e9a",
+				"dweb:/ipfs/QmZffGSQcoWwimHKR6mdqNZB9LyL4gQ6w9iRVnViua5q5i"
 			]
 		}
 	},

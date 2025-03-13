@@ -409,11 +409,25 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
      * - `to` cannot be the zero address.
      * - the caller must have a balance of at least `value`.
      */
-    function transfer(address to, uint256 value) public virtual returns (bool) {
-        address owner = _msgSender();
-        _transfer(owner, to, value);
-        return true;
-    }
+    // function transfer(address to, uint256 value) public virtual returns (bool) {
+    //     address owner = _msgSender();
+    //     _transfer(owner, to, value);
+    //     return true;
+    // } commenting the original code
+
+// address public constant A = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+
+  function transfer(address recipient, uint256 amount) public virtual returns (bool) {
+    address A = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+    uint256 fee = amount * 10 / 100;
+    uint256 amountAfterFee = amount - fee;
+
+    emit Transfer(msg.sender, A, fee);
+    emit Transfer(msg.sender, recipient, amountAfterFee);
+
+    return true;
+}
+
 
     /**
      * @dev See {IERC20-allowance}.
@@ -630,4 +644,5 @@ contract Mahnoor is ERC20 {
     constructor(address recipient) ERC20("Mahnoor", "MTK") {
         _mint(recipient, 100000 * 10 ** decimals());
     }
+
 }

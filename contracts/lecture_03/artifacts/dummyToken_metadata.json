@@ -139,11 +139,11 @@
 	},
 	"sources": {
 		"contracts/lecture_03/dummy_token.sol": {
-			"keccak256": "0x55afd876e67fea9f1cf9eff6772c9076bf85b4ae82dea9ddba5138f7e660210e",
+			"keccak256": "0x6a58c46f236558c5007b375655eb1d7d813c33da12ff17608e84dcda6792fbfc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f37cd8241457eacf603c9726b254787ce591daa90316f70c556137d213b1772a",
-				"dweb:/ipfs/QmWp5uF7quzdaqEApqDDhYezjdRwc5yHUYADXcyvjpMvFv"
+				"bzz-raw://58e9f418d9eeb908469f05233e40936fc054a43f17e7a59382944bf173e0758c",
+				"dweb:/ipfs/QmegrczVbRebMVMG7X57b7Kcax2sH4eobeiGKWmizSPvWi"
 			]
 		}
 	},

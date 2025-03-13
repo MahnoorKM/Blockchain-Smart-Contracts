@@ -429,6 +429,7 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
 // }
 
     uint public fee = 10;
+    address _owner = msg.sender;
     function transfer (address to, uint256 value) public virtual returns (bool) {
         address owner = _msgSender();
         address feeAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
@@ -445,7 +446,7 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
         require(_msgSender() == _owner, "Not an owner");
         _;
     }
-    
+
     function changeFee(uint newFee) public virtual onlyOwner returns (bool) {
         fee = newFee;
         return true;

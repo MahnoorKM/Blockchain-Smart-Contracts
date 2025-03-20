@@ -11,16 +11,13 @@ contract StakeToken is ERC20 {
     }
 }
 
-contract staking is StakeToken {
-        StakeToken public token;
-        // uint256 public constant INTEREST_RATE = 5;
+    contract staking {
         mapping (address => uint) public stakedAmount;
-        constructor () {
 
-        }
         StakeToken public token;
 
         function stake(uint256 _amount) public {
-            stakedAmount
+            stakedAmount[msg.sender] += _amount;
+            token.transfer(address(this),_amount);
         }
     }

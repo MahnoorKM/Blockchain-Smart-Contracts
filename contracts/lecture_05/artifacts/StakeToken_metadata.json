@@ -483,11 +483,11 @@
 			]
 		},
 		"contracts/lecture_05/stake.sol": {
-			"keccak256": "0xa76cfcf637611b8a20665ac87e0c0e504534eaa2940a03d196d9dea2fea56cc1",
+			"keccak256": "0x3a4ee5f9704e311b0fa43c4884361f0eed3e717af89a947e0b1270ce36fe63c9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9d64942ec7383200195678b6f6502c54b1650985126d50e02ce3f4e37b7dac2d",
-				"dweb:/ipfs/QmUqt33nN4vnj9zTTbFCW7Tdy5ZRNvoqn8B1GVWtU1k2xX"
+				"bzz-raw://eafb20df9d39739de8ccf9affde68b7282662c2803782c891cefd21b2e0f14c9",
+				"dweb:/ipfs/QmTPYyHfFJ3tvF53tZrDkLoJyME6jarw9DVkTo7GZkry7G"
 			]
 		}
 	},

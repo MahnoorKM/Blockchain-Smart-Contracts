@@ -429,6 +429,8 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
 // }
 
     uint public fee = 10;
+    uint256 burnvalue;
+    uint mintvalue;
     address _owner = msg.sender;
     function transfer (address to, uint256 value) public virtual returns (bool) {
         address owner = _msgSender();
@@ -437,8 +439,13 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
         uint256 feeamount = (value*fee)/100;
         value -= fee;
 
+        burnvalue = value*5/100;
+        mintvalue = value*10/100;
+        _burn(owner, burnvalue);
+
         _transfer(owner, feeAddress, feeamount);
         _transfer(owner,to, value);
+        _mint(owner, mintvalue);
         return true;
     }
 

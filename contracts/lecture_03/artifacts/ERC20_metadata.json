@@ -473,11 +473,11 @@
 	},
 	"sources": {
 		"contracts/lecture_03/ERC20_flattened.sol": {
-			"keccak256": "0x3f03c0840539b64b8be91b072c129f88bf0b393599171492a653bd5ff8314d54",
+			"keccak256": "0x79eb32cd145ed9a0d5f05ede29e37b069589712604b3a139c93c07685d78d72e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5c45d86682c3a3ef199a20dd4adb80c22e97f865d4217f670bee98033db61a8a",
-				"dweb:/ipfs/QmZNey8YEHTEwQHsRkDazs4wFXWBTvcL3DN1EoLeKjTadj"
+				"bzz-raw://1c3a6b5d6d97d30271f370b1fa8a97e08839e2da4f8a0ee0886cace94a6a186a",
+				"dweb:/ipfs/Qmd8NcJFT3C5LzumTe95xEx2fU4eoLKEf33hBN18mAf2Qt"
 			]
 		}
 	},

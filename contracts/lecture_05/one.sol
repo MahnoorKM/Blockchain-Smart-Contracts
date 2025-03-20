@@ -4,6 +4,7 @@ pragma solidity >=0.7.0 <0.9.0;
 // staking contract
 // make a smart contract where you invest tokens and get 5% interest on it when you withdraw
 // no time log for now
+// not my implementation
 
 contract SimpleStaking {
     uint256 public constant INTEREST_RATE = 5; // 5% interest

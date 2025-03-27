@@ -13,6 +13,7 @@ contract StakeToken is ERC20 {
 
     contract staking { //implementation steps written in notepad
         mapping (address => uint256) public stakedAmount;
+        mapping (address => uint256) public stakeTime;
 
         StakeToken public token;
 
@@ -24,12 +25,25 @@ contract StakeToken is ERC20 {
             require (_amount > 0, "Must be greater than 0");
             stakedAmount[msg.sender] += _amount;
             token.transfer(address(this),_amount);
+            stakeTime[msg.sender] = block.timestamp;
         }
 
+        // function unStake (uint _amount) public {
+        //     stakedAmount[msg.sender] -= _amount;
+        //     uint reward = stakeTime[msg.sender];
+        //     token.transferFrom(address(this), msg.sender, _amount);
+        // }
+
         function withdraw() public {
+            require(block.timestamp >= (stakeTime[msg.sender]) + 1 days, "Time Constraints");
             uint256 _amount = stakedAmount[msg.sender];
             require(_amount > 0, "Not staked");
-            uint256 reward = (_amount *5 ) / 100;
+
+            uint256 claimTime = block.timestamp - stakeTime[msg.sender];
+            claimTime = claimTime / 1 days;
+            uint256 reward = ((_amount * claimTime) / 100) + _amount;
+         
+            stakedAmount[msg.sender] -= _amount + reward;
 
             token.transfer(address(this), _amount + reward);
         }
@@ -41,7 +55,7 @@ contract StakeToken is ERC20 {
 5. now go to the staking contract and enter a value in "stake"
 6. copy the address of the account from which this was deployed and paste in "stakedAmount" function
 */
-// ----------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     contract staking2 { //classwork
         mapping (address => uint256) public stakedAmount;
 

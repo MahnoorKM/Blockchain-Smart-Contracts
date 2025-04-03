@@ -205,11 +205,11 @@
 			]
 		},
 		"contracts/lecture_06/TimeLockContract.sol": {
-			"keccak256": "0xadb7f05c8bd4bf7afb151381bedc23d06170fc0e0d98c442ce4e81605ef697b8",
+			"keccak256": "0xda8711e390be8f852ad5f9ac5631181476c9a0d6aa1dbb32d73c10beaa67b128",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2d493f909532260ea7886d1a13e967571ee977151a1b6d811e1ff467992b6a99",
-				"dweb:/ipfs/Qmf3ovCCsTX4REE6jM2LwFhcWQDo2AKzSEe1FfYkug7Yvw"
+				"bzz-raw://5f6d1bd82fd1a8e407edff2ece6f83a84ac6b139239de8a134d88323eacee97e",
+				"dweb:/ipfs/QmZQ2SXaVaCbwxoW16zLXGaVgTRL9gad3BfE9yCpaJ1jvK"
 			]
 		}
 	},

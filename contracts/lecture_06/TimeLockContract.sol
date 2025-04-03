@@ -39,21 +39,21 @@ contract TimeLock {
         emit TokensLocked(msg.sender, _amount, unlockTime);
     }
 
-     function withdraw() public {
-            require(block.timestamp >= (unlockTime[msg.sender]) + 1 days, "Time Constraints");
-            uint256 _amount = stakedAmount[msg.sender];
-            require(_amount > 0, "Not staked");
+    //  function withdraw() public {
+    //         require(block.timestamp >= (unlockTime[msg.sender]) + 1 days, "Time Constraints");
+    //         uint256 _amount = stakedAmount[msg.sender];
+    //         require(_amount > 0, "Not staked");
 
-            uint256 claimTime = block.timestamp - stakeTime[msg.sender];
-            claimTime = claimTime / 1 days;
-            uint256 reward = ((_amount * claimTime) / 100) + _amount;
+    //         uint256 claimTime = block.timestamp - stakeTime[msg.sender];
+    //         claimTime = claimTime / 1 days;
+    //         uint256 reward = ((_amount * claimTime) / 100) + _amount;
          
-            stakedAmount[msg.sender] -= _amount + reward;
+    //         stakedAmount[msg.sender] -= _amount + reward;
 
-            token.transfer(address(this), _amount + reward);
-        }
+    //         token.transfer(address(this), _amount + reward);
+    //     }
     }
-}
+
 
 
 

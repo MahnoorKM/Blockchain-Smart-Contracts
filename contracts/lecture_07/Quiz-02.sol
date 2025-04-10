@@ -11,6 +11,9 @@ contract Mahnoor is ERC20 {
     }
 }
 
+event List (address token, uint256 totalAmount);
+event Buy (address sender, uint256 totalAmount);
+
 contract ERC20Auction {
     struct Listing {
         address seller;
@@ -19,12 +22,10 @@ contract ERC20Auction {
         uint remainingAmount;
     }
 
-
-
     Listing[] public listings;
 
 
-function ListTokens (IERC20 token, uint totalAmount, uint pricePerToken) public {
+function ListTokens (IERC20 token, uint totalAmount, uint pricePerToken) public payable {
     require (totalAmount > 0, "Must be greater than 0");
     token.transferFrom(msg.sender, address(this), totalAmount);
 }
@@ -42,7 +43,6 @@ function ListTokens (IERC20 token, uint totalAmount, uint pricePerToken) public 
 
     function getListCount() view public returns (uint) {
         return listings.length;
-
     }
 
-    }
+}

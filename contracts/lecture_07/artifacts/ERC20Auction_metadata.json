@@ -43,7 +43,7 @@
 				],
 				"name": "ListTokens",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -162,11 +162,11 @@
 			]
 		},
 		"contracts/lecture_07/Quiz-02.sol": {
-			"keccak256": "0xc6364d1ad8a4714e7a5fe0a81abbc60972a8beaac0097e8b1f1b2de315e7be3e",
+			"keccak256": "0x74dfaf30192907a825b3b882dea5e65ca901a59467cbd9e2912d2e1b944940e4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2ffef2ea04eb8c27546d2462b38f8dd7119d1db5b43d0cd7770525e82bccc0e5",
-				"dweb:/ipfs/Qmf94V6751Xc7fWnC1KLu3MTC9DooAfTg34CHqvVABDQpP"
+				"bzz-raw://875e1ba40165b021e838d3848072d172fefa77c1ca2f6f8c434c49429b1238a2",
+				"dweb:/ipfs/QmWJrzQ3oWGQ9UdCijtXkM4FPS6TJLmRSqFf5DjNkvxgtL"
 			]
 		}
 	},

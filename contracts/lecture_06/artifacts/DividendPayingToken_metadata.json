@@ -766,11 +766,11 @@
 			]
 		},
 		"contracts/lecture_06/SmartContracts.sol": {
-			"keccak256": "0xa488dfbb5fcb2ef096931c0105240dfb019da64c425a25d5aabac0597221fefa",
+			"keccak256": "0x693852f2f63dbc83b707ae3a01b2d01f7f68a235f09d727e361cd23723036fc7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6f050ceb0d37f789f11764a26bcff9daf4f76464cc590d2f9fb3ccf75980dc8f",
-				"dweb:/ipfs/QmTb8VXAP4hL2NuewyJCC5SNe6C4pxcQk3WWpBzK9qpNLy"
+				"bzz-raw://4aaa03a1d4eded461a0c342a958748d59a0026080c0fe29690b6f9f12c299a95",
+				"dweb:/ipfs/QmQBFhZx7rgoN5p3L837iZXDocrHxzy2eeFB4cojKSKDtQ"
 			]
 		}
 	},

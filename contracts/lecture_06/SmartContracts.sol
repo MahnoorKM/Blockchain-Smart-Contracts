@@ -113,7 +113,7 @@ contract TaxedToken is ERC20, Ownable {
     }
 }
 
-// 6. Reflection Token
+// 6. Reflection Token //imp
 contract ReflectionToken is ERC20 {
     uint256 private constant MAX = type(uint256).max;
     uint256 private _totalReflections;
@@ -162,7 +162,7 @@ contract ReflectionToken is ERC20 {
     }
 }
 
-// 7. Dividend-Paying Token
+// 7. Dividend-Paying Token //imp
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 contract DividendPayingToken is ERC20, Ownable {
@@ -212,7 +212,7 @@ contract DividendPayingToken is ERC20, Ownable {
     }
 }
 
-// 8. Rebasing Token
+// 8. Rebasing Token //imp
 contract RebasingToken is ERC20, Ownable {
     uint256 private constant REBASE_FACTOR = 10**18;
     uint256 public rebaseIndex = REBASE_FACTOR;
@@ -311,7 +311,7 @@ contract WrappedToken is ERC20 {
 
 
 
-// 10. Stablecoin
+// 10. Stablecoin //imp
 
 
 contract Stablecoin is ERC20, Ownable {

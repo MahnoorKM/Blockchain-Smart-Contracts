@@ -6,21 +6,102 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "listingId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "pricePerToken",
+						"type": "uint256"
+					}
+				],
+				"name": "TokensListed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "listingId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "buyer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "TokensPurchased",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "ListingID",
+						"name": "listingId",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "TokenAmount",
+						"name": "tokenAmount",
 						"type": "uint256"
 					}
 				],
-				"name": "BuyTokens",
+				"name": "buyTokens",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getListingCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -41,14 +122,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "ListTokens",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getListCount",
+				"name": "listTokens",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -56,7 +130,7 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -88,6 +162,11 @@
 						"internalType": "uint256",
 						"name": "remainingAmount",
 						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -107,7 +186,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/lecture_07/Quiz-02.sol": "ERC20Auction"
+			"contracts/lecture_07/solved.sol": "ERC20Auction"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -121,52 +200,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
-			"keccak256": "0x880da465c203cec76b10d72dbd87c80f387df4102274f23eea1f9c9b0918792b",
+		"contracts/lecture_07/solved.sol": {
+			"keccak256": "0x1f858b5a1224e0b0e67b60dbab530ae45681c7803b61d3997bceade7b05d4f60",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://399594cd8bb0143bc9e55e0f1d071d0d8c850a394fb7a319d50edd55d9ed822b",
-				"dweb:/ipfs/QmbPZzgtT6LEm9CMqWfagQFwETbV1ztpECBB1DtQHrKiRz"
-			]
-		},
-		"@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-			"keccak256": "0x6ef9389a2c07bc40d8a7ba48914724ab2c108fac391ce12314f01321813e6368",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://b7a5cb39b1e6df68f4dd9a5e76e853d745a74ffb3dfd7df4ae4d2ace6992a171",
-				"dweb:/ipfs/QmPbzKR19rdM8X3PLQjsmHRepUKhvoZnedSR63XyGtXZib"
-			]
-		},
-		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-			"keccak256": "0xe06a3f08a987af6ad2e1c1e774405d4fe08f1694b67517438b467cecf0da0ef7",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://df6f0c459663c9858b6cba2cda1d14a7d05a985bed6d2de72bd8e78c25ee79db",
-				"dweb:/ipfs/QmeTTxZ7qVk9rjEv2R4CpCwdf8UMCcRqDNMvzNxHc3Fnn9"
-			]
-		},
-		"@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-			"keccak256": "0x70f2f713b13b7ce4610bcd0ac9fec0f3cc43693b043abcb8dc40a42a726eb330",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://c13d13304ac79a83ab1c30168967d19e2203342ebbd6a9bbce4db7550522dcbf",
-				"dweb:/ipfs/QmeN5jKMN2vw5bhacr6tkg78afbTTZUeaacNHqjWt4Ew1r"
-			]
-		},
-		"@openzeppelin/contracts/utils/Context.sol": {
-			"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12",
-				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
-			]
-		},
-		"contracts/lecture_07/Quiz-02.sol": {
-			"keccak256": "0x74dfaf30192907a825b3b882dea5e65ca901a59467cbd9e2912d2e1b944940e4",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://875e1ba40165b021e838d3848072d172fefa77c1ca2f6f8c434c49429b1238a2",
-				"dweb:/ipfs/QmWJrzQ3oWGQ9UdCijtXkM4FPS6TJLmRSqFf5DjNkvxgtL"
+				"bzz-raw://a37d0b148d37f50f9e1e6756c6cfcccc74eccf3ee3c9a60af98748488b8e027f",
+				"dweb:/ipfs/QmdgcJ85g8mDJrU8sPFBTCtpMFhKFfCfSVGGuLVvhwX6QG"
 			]
 		}
 	},

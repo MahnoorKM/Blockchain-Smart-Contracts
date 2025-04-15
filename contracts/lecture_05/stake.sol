@@ -45,7 +45,7 @@ contract StakeToken is ERC20 {
          
             stakedAmount[msg.sender] -= _amount + reward;
 
-            token.transfer(address(this), _amount + reward);
+            token.transfer(msg.sender, _amount + reward);
         }
     }
 
